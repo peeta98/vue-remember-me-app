@@ -3,8 +3,8 @@
     <base-card>
       <header>
         <h3>{{ title }}</h3>
-        <button>Delete</button>
-      </header>
+        <base-button mode="flat">Delete</base-button>
+      </header> 
       <p>{{ description }}</p>
       <nav>
         <a :href="link" target="_blank">View Resource</a>
@@ -14,7 +14,9 @@
 </template>
 
 <script>
+import BaseButton from '../UI/BaseButton.vue'
 export default {
+  components: { BaseButton },
   props: ['title', 'description', 'link'],
 }
 </script>
